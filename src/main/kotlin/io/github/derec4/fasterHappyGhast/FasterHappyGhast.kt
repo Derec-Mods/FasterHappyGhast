@@ -11,11 +11,11 @@ class FasterHappyGhast : JavaPlugin() {
         // Plugin startup logic
         server.pluginManager.registerEvents(HappyGhastSpawnListener(), this)
 
-        Bukkit.getLogger().info("")
-        Bukkit.getServer().consoleSender.sendMessage("${NamedTextColor.GREEN}  |_______|                             ")
-        Bukkit.getServer().consoleSender.sendMessage("${NamedTextColor.GREEN}  | Derex |     Derex Despawn v1.0.0")
-        Bukkit.getServer().consoleSender.sendMessage("${NamedTextColor.GREEN}  |_______|     Running on ${Bukkit.getName()} - ${Bukkit.getVersion()}")
-        Bukkit.getLogger().info("")
+        this.componentLogger.info("")
+        this.componentLogger.info("${NamedTextColor.GREEN}  |_______|                             ")
+        this.componentLogger.info("${NamedTextColor.GREEN}  | Derex |     Derex Faster Happy Ghast v1.0.0.0")
+        this.componentLogger.info("${NamedTextColor.GREEN}  |_______|     Running on ${Bukkit.getName()} - ${Bukkit.getVersion()}")
+        this.componentLogger.info("")
     }
 
     override fun onDisable() {
