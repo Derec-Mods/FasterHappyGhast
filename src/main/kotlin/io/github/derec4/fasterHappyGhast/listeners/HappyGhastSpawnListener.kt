@@ -15,6 +15,6 @@ class HappyGhastSpawnListener : Listener {
             return
         }
 
-        happyGhast.getAttribute(Attribute.FLYING_SPEED)?.baseValue = 0.5
+        happyGhast.getAttribute(Attribute.FLYING_SPEED)?.baseValue = 0.3
     }
 }
