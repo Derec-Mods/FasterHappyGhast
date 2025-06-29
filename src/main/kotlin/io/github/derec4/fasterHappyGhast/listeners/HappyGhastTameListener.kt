@@ -4,12 +4,11 @@ import org.bukkit.attribute.Attribute
 import org.bukkit.entity.HappyGhast
 import org.bukkit.event.EventHandler
 import org.bukkit.event.Listener
-import org.bukkit.event.entity.CreatureSpawnEvent
+import org.bukkit.event.entity.EntityTameEvent
 
-class HappyGhastSpawnListener : Listener {
+class HappyGhastTameListener: Listener {
     @EventHandler
-    fun onHappyGhastSpawn(event: CreatureSpawnEvent) {
-        if (!)
+    fun onHappyGhastTame (event: EntityTameEvent) {
         val happyGhast = event.entity;
 
         if (happyGhast !is HappyGhast) {
