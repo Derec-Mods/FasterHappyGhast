@@ -1,5 +1,6 @@
 package io.github.derec4.fasterHappyGhast
 
+import io.github.derec4.fasterHappyGhast.listeners.HappyGhastEquipListener
 import io.github.derec4.fasterHappyGhast.listeners.HappyGhastSpawnListener
 import io.github.derec4.fasterHappyGhast.listeners.HappyGhastTameListener
 import net.kyori.adventure.text.format.NamedTextColor
@@ -20,6 +21,7 @@ class FasterHappyGhast : JavaPlugin() {
 
         server.pluginManager.registerEvents(HappyGhastSpawnListener(), this);
         server.pluginManager.registerEvents(HappyGhastTameListener(), this);
+        server.pluginManager.registerEvents(HappyGhastEquipListener(), this);
 
         this.componentLogger.info("")
         this.componentLogger.info("${NamedTextColor.GREEN}  |_______|                             ")
