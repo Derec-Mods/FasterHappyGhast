@@ -1,5 +1,6 @@
 package io.github.derec4.fasterHappyGhast.listeners
 
+import io.github.derec4.fasterHappyGhast.FasterHappyGhast
 import org.bukkit.attribute.Attribute
 import org.bukkit.entity.HappyGhast
 import org.bukkit.event.EventHandler
@@ -15,6 +16,6 @@ class HappyGhastTameListener: Listener {
             return;
         }
 
-        happyGhast.getAttribute(Attribute.FLYING_SPEED)?.baseValue = 0.17;
+        happyGhast.getAttribute(Attribute.FLYING_SPEED)?.baseValue = FasterHappyGhast.baseSpeed;
     }
 }
