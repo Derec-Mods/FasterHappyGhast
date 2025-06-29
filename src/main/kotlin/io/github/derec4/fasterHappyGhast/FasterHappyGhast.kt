@@ -13,7 +13,7 @@ class FasterHappyGhast : JavaPlugin() {
 
         this.componentLogger.info("")
         this.componentLogger.info("${NamedTextColor.GREEN}  |_______|                             ")
-        this.componentLogger.info("${NamedTextColor.GREEN}  | Derex |     Derex Faster Happy Ghast v1.0.0.0")
+        this.componentLogger.info("${NamedTextColor.GREEN}  | Derex |     Derex Faster Happy Ghasts v1.0.0.0")
         this.componentLogger.info("${NamedTextColor.GREEN}  |_______|     Running on ${Bukkit.getName()} - ${Bukkit.getVersion()}")
         this.componentLogger.info("")
     }
