@@ -5,7 +5,7 @@ plugins {
 }
 
 group = "io.github.derec4"
-version = "1.0.1.0"
+version = "1.1.0.0"
 
 repositories {
     mavenCentral()
