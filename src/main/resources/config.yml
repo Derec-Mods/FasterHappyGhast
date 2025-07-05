@@ -7,5 +7,8 @@
 # Speed used for the Happy Ghast (set as attribute:flying_speed base in vanilla mob stats)
 base-speed: 0.17
 
+# Speed used for the Happy Ghast when not mounted (set as attribute:flying_speed base in vanilla mob stats)
+default-speed: 0.03
+
 # If the plugin should make untamed Happy Ghasts faster too
 affect-untamed-happy-ghasts: false

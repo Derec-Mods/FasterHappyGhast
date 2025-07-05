@@ -9,7 +9,8 @@ import org.bukkit.plugin.java.JavaPlugin
 
 class FasterHappyGhast : JavaPlugin() {
     companion object Config {
-        var baseSpeed: Double = 0.17
+        var baseSpeed: Double = 0.17;
+        var defaultSpeed: Double = 0.03;
         var affectAll: Boolean = false;
     }
 
@@ -17,6 +18,7 @@ class FasterHappyGhast : JavaPlugin() {
         // Plugin startup logic
         saveDefaultConfig();
         baseSpeed = config.getDouble("base-speed", 0.17);
+        defaultSpeed = config.getDouble("default-speed", 0.03);
         affectAll = config.getBoolean("affect-untamed-happy-ghasts", false);
 
         server.pluginManager.registerEvents(HappyGhastSpawnListener(), this);
