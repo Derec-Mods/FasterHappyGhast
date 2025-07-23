@@ -12,7 +12,7 @@ class FasterHappyGhast : JavaPlugin() {
         var baseSpeed: Double = 0.17;
         var defaultSpeed: Double = 0.03;
         var affectAll: Boolean = false;
-        var alwaysAffect: Boolean = false;
+        var affectHarnessOnly: Boolean = false;
     }
 
     override fun onEnable() {
@@ -21,7 +21,7 @@ class FasterHappyGhast : JavaPlugin() {
         baseSpeed = config.getDouble("base-speed", 0.17);
         defaultSpeed = config.getDouble("default-speed", 0.03);
         affectAll = config.getBoolean("affect-untamed-happy-ghasts", false);
-        alwaysAffect = config.getBoolean("always-affect-tamed-ghasts", false);
+        affectHarnessOnly = config.getBoolean("always-affect-tamed-ghasts", false);
 
         server.pluginManager.registerEvents(HappyGhastSpawnListener(), this);
         server.pluginManager.registerEvents(HappyGhastTameListener(), this);

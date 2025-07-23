@@ -6,7 +6,6 @@ import org.bukkit.attribute.Attribute
 import org.bukkit.entity.HappyGhast
 import org.bukkit.event.EventHandler
 import org.bukkit.event.Listener
-import org.bukkit.event.entity.EntityTameEvent
 
 class HappyGhastEquipListener: Listener {
     @EventHandler
@@ -17,7 +16,7 @@ class HappyGhastEquipListener: Listener {
             return;
         }
 
-        if (FasterHappyGhast.alwaysAffect) {
+        if (FasterHappyGhast.affectHarnessOnly) {
             happyGhast.getAttribute(Attribute.FLYING_SPEED)?.baseValue = FasterHappyGhast.baseSpeed;
         }
     }
