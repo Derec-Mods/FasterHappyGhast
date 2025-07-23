@@ -16,7 +16,9 @@ class HappyGhastEquipListener: Listener {
         if (happyGhast !is HappyGhast) {
             return;
         }
-        happyGhast.getAttribute(Attribute.FLYING_SPEED)?.baseValue = FasterHappyGhast.baseSpeed;
 
+        if (FasterHappyGhast.alwaysAffect) {
+            happyGhast.getAttribute(Attribute.FLYING_SPEED)?.baseValue = FasterHappyGhast.baseSpeed;
+        }
     }
 }
