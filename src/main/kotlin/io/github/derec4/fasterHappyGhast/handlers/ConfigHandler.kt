@@ -7,7 +7,7 @@ import org.bukkit.plugin.java.JavaPlugin
 
 class ConfigHandler {
     var baseSpeed: Double = 0.17
-    var defaultSpeed: Double = 0.03
+    var defaultSpeed: Double = 0.05
     var affectAll: Boolean = false
     var affectHarnessOnly: Boolean = true
 

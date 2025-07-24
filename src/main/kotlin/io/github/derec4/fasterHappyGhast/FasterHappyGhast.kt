@@ -8,8 +8,8 @@ import org.bukkit.plugin.java.JavaPlugin
 
 class FasterHappyGhast : JavaPlugin() {
     companion object Config {
-        var baseSpeed: Double = 0.17
-        var defaultSpeed: Double = 0.03
+        var baseSpeed: Double = 0.0
+        var defaultSpeed: Double = 0.0
         var affectAll: Boolean = false
         var affectHarnessOnly: Boolean = false
     }
@@ -18,7 +18,6 @@ class FasterHappyGhast : JavaPlugin() {
         // Plugin startup logic
         val configHandler = ConfigHandler()
         configHandler.generateDefaultConfig(config)
-        config.options().copyDefaults(true)
         saveConfig()
         configHandler.load(this)
 
