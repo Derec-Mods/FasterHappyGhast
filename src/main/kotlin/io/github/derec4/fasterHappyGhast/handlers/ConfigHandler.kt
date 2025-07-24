@@ -6,21 +6,10 @@ import org.bukkit.plugin.Plugin
 import org.bukkit.plugin.java.JavaPlugin
 
 class ConfigHandler {
-    var baseSpeed: Double = 0.17;
-    var affectAll: Boolean = false;
-
-    fun load(plugin: JavaPlugin) {
-        val config = plugin.config;
-        FasterHappyGhast.Config.baseSpeed = config.getDouble("base-speed", 0.17);
-        FasterHappyGhast.Config.affectAll = config.getBoolean("affect-untamed-happy-ghasts", false);
-    }
-
-    fun save(plugin: JavaPlugin) {
-        val config = plugin.config
-        config.set("base-speed", FasterHappyGhast.Config.baseSpeed)
-        config.set("affect-untamed-happy-ghasts", FasterHappyGhast.Config.affectAll)
-        plugin.saveConfig()
-    }
+    var baseSpeed: Double = 0.17
+    var defaultSpeed: Double = 0.03
+    var affectAll: Boolean = false
+    var affectHarnessOnly: Boolean = true
 
     fun generateDefaultConfig(config: FileConfiguration) {
         config.options().setHeader(
@@ -32,8 +21,27 @@ class ConfigHandler {
                 "--------------------------------------------------"
             )
         )
-        config.addDefault("base-speed", 0.17)
-        config.addDefault("affect-untamed-happy-ghasts", false)
+        config.addDefault("base-speed", baseSpeed)
+        config.addDefault("default-speed", defaultSpeed)
+        config.addDefault("affect-untamed-happy-ghasts", affectAll)
+        config.addDefault("always-affect-tamed-ghasts", affectHarnessOnly)
         config.options().copyDefaults(true)
+    }
+
+    fun load(plugin: JavaPlugin) {
+        val config = plugin.config
+        baseSpeed = config.getDouble("base-speed", 0.17)
+        defaultSpeed = config.getDouble("default-speed", 0.03)
+        affectAll = config.getBoolean("affect-untamed-happy-ghasts", false)
+        affectHarnessOnly = config.getBoolean("always-affect-tamed-ghasts", true)
+    }
+
+    fun save(plugin: JavaPlugin) {
+        val config = plugin.config
+        config.set("base-speed", baseSpeed)
+        config.set("default-speed", defaultSpeed)
+        config.set("affect-untamed-happy-ghasts", affectAll)
+        config.set("always-affect-tamed-ghasts", affectHarnessOnly)
+        plugin.saveConfig()
     }
 }

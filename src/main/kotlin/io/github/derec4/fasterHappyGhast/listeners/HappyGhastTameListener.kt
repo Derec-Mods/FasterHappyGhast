@@ -10,6 +10,7 @@ import org.bukkit.event.entity.EntityTameEvent
 class HappyGhastTameListener: Listener {
     @EventHandler
     fun onHappyGhastTame (event: EntityTameEvent) {
+        println("[DEBUG] HappyGhastTameListener triggered")
         val happyGhast = event.entity;
 
         if (happyGhast !is HappyGhast) {
