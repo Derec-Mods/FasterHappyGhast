@@ -31,7 +31,7 @@ class ConfigHandler {
     fun load(plugin: JavaPlugin) {
         val config = plugin.config
         baseSpeed = config.getDouble("base-speed", 0.17)
-        defaultSpeed = config.getDouble("default-speed", 0.03)
+        defaultSpeed = config.getDouble("default-speed", 0.05)
         affectAll = config.getBoolean("affect-untamed-happy-ghasts", false)
         affectHarnessOnly = config.getBoolean("always-affect-tamed-ghasts", true)
     }

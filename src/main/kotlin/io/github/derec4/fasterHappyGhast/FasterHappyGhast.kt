@@ -1,5 +1,6 @@
 package io.github.derec4.fasterHappyGhast
 
+import io.github.derec4.fasterHappyGhast.handlers.ConfigHandler
 import io.github.derec4.fasterHappyGhast.listeners.*
 import net.kyori.adventure.text.format.NamedTextColor
 import org.bukkit.Bukkit
@@ -15,7 +16,15 @@ class FasterHappyGhast : JavaPlugin() {
 
     override fun onEnable() {
         // Plugin startup logic
-        saveDefaultConfig()
+        val configHandler = ConfigHandler()
+        configHandler.generateDefaultConfig(config)
+        saveConfig()
+        configHandler.load(this)
+
+        Config.baseSpeed = configHandler.baseSpeed
+        Config.defaultSpeed = configHandler.defaultSpeed
+        Config.affectAll = configHandler.affectAll
+        Config.affectHarnessOnly = configHandler.affectHarnessOnly
 
         server.pluginManager.registerEvents(HappyGhastSpawnListener(), this)
         server.pluginManager.registerEvents(HappyGhastTameListener(), this)

@@ -10,7 +10,6 @@ import org.bukkit.event.entity.CreatureSpawnEvent
 class HappyGhastSpawnListener : Listener {
     @EventHandler
     fun onHappyGhastSpawn(event: CreatureSpawnEvent) {
-        println("[DEBUG] HappyGhastSpawnListener triggered")
         if (!FasterHappyGhast.affectAll) {
             return;
         }
