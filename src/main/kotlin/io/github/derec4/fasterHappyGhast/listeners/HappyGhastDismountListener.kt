@@ -10,7 +10,7 @@ import org.bukkit.event.entity.EntityDismountEvent
 class HappyGhastDismountListener: Listener {
     @EventHandler
     fun onHappyGhastMount(event: EntityDismountEvent) {
-        println("[DEBUG] HappyGhastDismountListener triggered")
+//        println("[DEBUG] HappyGhastDismountListener triggered")
         val happyGhast = event.dismounted
 
         if (happyGhast !is HappyGhast) {

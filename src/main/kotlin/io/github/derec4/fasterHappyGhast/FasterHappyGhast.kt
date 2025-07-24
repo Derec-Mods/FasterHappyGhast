@@ -18,6 +18,7 @@ class FasterHappyGhast : JavaPlugin() {
         // Plugin startup logic
         val configHandler = ConfigHandler()
         configHandler.generateDefaultConfig(config)
+        config.options().copyDefaults(true)
         saveConfig()
         configHandler.load(this)
 

@@ -10,7 +10,7 @@ import org.bukkit.event.entity.EntityMountEvent
 class HappyGhastMountListener: Listener {
     @EventHandler
     fun onHappyGhastMount (event: EntityMountEvent) {
-        println("[DEBUG] HappyGhastMountListener triggered")
+//        println("[DEBUG] HappyGhastMountListener triggered")
         val happyGhast = event.mount;
 
         if (happyGhast !is HappyGhast) {

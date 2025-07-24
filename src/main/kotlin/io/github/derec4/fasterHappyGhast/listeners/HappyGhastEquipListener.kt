@@ -10,7 +10,7 @@ import org.bukkit.event.Listener
 class HappyGhastEquipListener: Listener {
     @EventHandler
     fun onHappyGhastEquip (event: EntityEquipmentChangedEvent) {
-        println("[DEBUG] HappyGhastEquipListener triggered")
+//        println("[DEBUG] HappyGhastEquipListener triggered")
         val happyGhast = event.entity;
 
         if (happyGhast !is HappyGhast) {
