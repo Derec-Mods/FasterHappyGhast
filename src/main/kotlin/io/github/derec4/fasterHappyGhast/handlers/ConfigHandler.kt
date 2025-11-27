@@ -14,7 +14,7 @@ class ConfigHandler {
                 "--------------------------------------------------",
                 "Happy Ghast vanilla friendly plugin by DerexXD",
                 "Report all ur troubles at the link below!",
-                "coming soon",
+                "https://github.com/Derec-Mods/FasterHappyGhast/issues",
                 "--------------------------------------------------"
             )
         )
