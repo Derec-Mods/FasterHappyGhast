@@ -20,7 +20,7 @@ class HappyGhastDismountListener: Listener {
         // Only remove speed boost if no passengers remain after this dismount
         // Bug credits: @DavidS-Repo
         // https://github.com/Derec-Mods/FasterHappyGhast/issues/1
-        if (happyGhast.getPassengers.isEmpty()) {
+        if (happyGhast.passengers.isEmpty()) {
             happyGhast.getAttribute(Attribute.FLYING_SPEED)?.baseValue = FasterHappyGhast.defaultSpeed
         }
     }
