@@ -2,6 +2,7 @@ package io.github.derec4.fasterHappyGhast
 
 import io.github.derec4.fasterHappyGhast.handlers.ConfigHandler
 import io.github.derec4.fasterHappyGhast.listeners.*
+import net.kyori.adventure.text.Component
 import net.kyori.adventure.text.format.NamedTextColor
 import org.bukkit.Bukkit
 import org.bukkit.plugin.java.JavaPlugin
@@ -31,11 +32,11 @@ class FasterHappyGhast : JavaPlugin() {
         server.pluginManager.registerEvents(HappyGhastMountListener(), this);
         server.pluginManager.registerEvents(HappyGhastDismountListener(), this);
 
-        this.componentLogger.info("");
-        this.componentLogger.info("${NamedTextColor.GREEN}  |_______|                             ");
-        this.componentLogger.info("${NamedTextColor.GREEN}  | Derex |     Derex Faster Happy Ghasts v" + description.version);
-        this.componentLogger.info("${NamedTextColor.GREEN}  |_______|     Running on ${Bukkit.getName()} - ${Bukkit.getVersion()}");
-        this.componentLogger.info("");
+        this.componentLogger.info(Component.empty())
+        this.componentLogger.info(Component.text("  |_______|                             ", NamedTextColor.GREEN))
+        this.componentLogger.info(Component.text("  | Derex |     Derex Faster Happy Ghasts v${description.version}", NamedTextColor.GREEN))
+        this.componentLogger.info(Component.text("  |_______|     Running on ${Bukkit.getName()} - ${Bukkit.getVersion()}", NamedTextColor.GREEN))
+        this.componentLogger.info(Component.empty())
     }
 
     override fun onDisable() {
