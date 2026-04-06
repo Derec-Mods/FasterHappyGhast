@@ -6,3 +6,13 @@ prefix: DerexXD
 authors: [ DerexXD ]
 description: Make happy ghasts zoom! Configurable speed
 website: https://derec4.github.io/derexsmp/
+commands:
+  happyghast:
+    description: Primary command for FasterHappyGhast plugin
+    usage: /<command> reload
+    permission: fasterhappyghast.reload
+
+permissions:
+  fasterhappyghast.reload:
+    description: Reload the FasterHappyGhast configuration
+    default: op
