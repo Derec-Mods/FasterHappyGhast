@@ -1,0 +1,13 @@
+{
+  "values": [
+    "fasterhappyghast:tick"
+  ]
+}
+# Minimal tick function for FasterHappyGhast datapack
+# This is intentionally a stub — it runs every tick if the datapack is enabled.
+# Add real behavior here when needed.
+
+# Example: run a placeholder advancement or scoreboard operation
+# say is removed in modern servers; keep it minimal
+
+
