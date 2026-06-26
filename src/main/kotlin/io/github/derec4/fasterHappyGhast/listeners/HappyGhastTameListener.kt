@@ -17,6 +17,6 @@ class HappyGhastTameListener: Listener {
             return;
         }
 
-        happyGhast.getAttribute(Attribute.FLYING_SPEED)?.baseValue = FasterHappyGhast.baseSpeed;
+        happyGhast.getAttribute(Attribute.FLYING_SPEED)?.baseValue = FasterHappyGhast.defaultSpeed;
     }
 }
