@@ -1,0 +1,28 @@
+{
+  "schemaVersion": 1,
+  "id": "fasterhappyghast",
+  "version": "${version}",
+  "name": "FasterHappyGhast",
+  "description": "Make happy ghasts zoom! Configurable speed",
+  "authors": [
+    "DerexXD"
+  ],
+  "contact": {
+    "homepage": "https://derec4.github.io/derexsmp/",
+    "issues": "https://github.com/Derec-Mods/FasterHappyGhast/issues"
+  },
+  "license": "MIT",
+  "environment": "*",
+  "entrypoints": {
+    "main": [
+      "io.github.derexxd.fasterhappyghast.FasterHappyGhast"
+    ]
+  },
+  "mixins": [
+    "fasterhappyghast.mixins.json"
+  ],
+  "depends": {
+    "fabricloader": ">=0.15.11",
+    "minecraft": ">=1.21.6 <1.22"
+  }
+}
