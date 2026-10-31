@@ -1,17 +1,17 @@
-﻿{
+{
 	"schemaVersion": 1,
-	"id": "modid",
+	"id": "fasterhappyghast",
 	"version": "${version}",
-	"name": "Example Mod",
-	"description": "This is an example description! Tell everyone what your mod is about!",
+	"name": "FasterHappyGhast",
+	"description": "Make happy ghasts zoom! Configurable speed",
 	"authors": [
 		"DerexXD"
 	],
 	"contact": {
-		"homepage": "https://www.derekchen.dev/",
-		"sources": "https://github.com/FabricMC/fabric-example-mod"
+		"homepage": "https://derec4.github.io/derexsmp/",
+		"issues": "https://github.com/Derec-Mods/FasterHappyGhast/issues"
 	},
-	"license": "CC0-1.0",
+	"license": "MIT",
 	"icon": "assets/modid/icon.png",
 	"environment": "*",
 	"entrypoints": {
