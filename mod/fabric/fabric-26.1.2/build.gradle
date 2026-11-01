@@ -12,12 +12,9 @@ repositories {
 }
 
 loom {
-	splitEnvironmentSourceSets()
-
 	mods {
-		"modid" {
+		"fasterhappyghast" {
 			sourceSet sourceSets.main
-			sourceSet sourceSets.client
 		}
 	}
 }

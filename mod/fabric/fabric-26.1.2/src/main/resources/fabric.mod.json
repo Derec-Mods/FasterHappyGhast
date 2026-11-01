@@ -12,22 +12,14 @@
 		"issues": "https://github.com/Derec-Mods/FasterHappyGhast/issues"
 	},
 	"license": "MIT",
-	"icon": "assets/modid/icon.png",
 	"environment": "*",
 	"entrypoints": {
 		"main": [
-			"com.example.ExampleMod"
-		],
-		"client": [
-			"com.example.client.ExampleModClient"
+			"io.github.derec4.fasterhappyghast.FasterHappyGhast"
 		]
 	},
 	"mixins": [
-		"modid.mixins.json",
-		{
-			"config": "modid.client.mixins.json",
-			"environment": "client"
-		}
+		"fasterhappyghast.mixins.json"
 	],
 	"depends": {
 		"fabricloader": ">=0.19.5",
